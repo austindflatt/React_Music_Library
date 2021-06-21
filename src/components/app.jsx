@@ -1,12 +1,20 @@
-import React, { Component } from "react";
-import TitleBar from './SearchBar/searchBar';
+import React, { Component } from 'react';
+import SearchBar from './SearchBar/searchBar';
+import SongForm from './SongForm/songForm';
+import MusicTable from './MusicTable/musicTable';
 
 class App extends Component {
-    state = {  }
+
+    state = { }
     render() {
         return (
-            <div className='container'>
-                <SearchBar />
+            <div>
+                <span>
+                    <MusicTable />
+                </span>
+                <span>
+                    <SongForm />
+                </span>
             </div>
         );
     }
