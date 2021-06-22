@@ -14,11 +14,22 @@ class App extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://127.0.0.1:8000/music/')
-        .then(response => {this.setState({
-            songs: response.data
-        })});
+        this.allSongs();
     }
+
+    async allSongs(){
+        let response = await axios.get("http://127.0.0.1:8000/music/");
+        this.setState({
+            songs: response.data,
+        })
+    }
+
+    delete = (id) => {
+        axios.delete(`http://127.0.0.1:8000/info/${id}`)
+        .then(() => this.setState({ status: 'Delete succesful' }))
+        window.location.reload();
+    }
+
 
     // Implement componentDidMount
     // Make API call in componentDidMount
@@ -27,10 +38,11 @@ class App extends Component {
 
     render() {
         return (
+            
             <Container textAlign='justified'>
                 <NavBar />
                 <SearchBar />
-                <MusicTable songs={this.state.songs} />
+                <MusicTable songs={this.state.songs} delete={this.delete} />
             </Container>
         );
     }

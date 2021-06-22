@@ -8,6 +8,7 @@ const MusicTable = (props) => {
         <Table inverted>
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Song Title</th>
                     <th>Artist</th>
                     <th>Album</th>
@@ -20,12 +21,14 @@ const MusicTable = (props) => {
         {props.songs.map((song, info) => { 
         return (
             <tr key={song.id}>
+                <td>{song.id}</td>
                 <td>{song.title}</td>
                 <td>{song.artist}</td>
                 <td>{song.album}</td>
                 <td>{song.release_date}</td>
                 <td>{song.genre}</td>
-                <td><Button positive onClick={() => props.deleteSongApi(info.id)}>Update</Button><Button negative onClick={() => props.deleteSongApi(info.id)}>Delete</Button></td>
+                <td><Button onClick={() => {props.update(song.id)}}>Update</Button>
+                <Button negative onClick={() => {props.delete(song.id)}}>Delete</Button></td>
             </tr>
         )}
     )}

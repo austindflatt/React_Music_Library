@@ -11,7 +11,7 @@ function NavBar(props) {
 
         <Menu.Menu position='right'>
           <Menu.Item>
-            <Button primary onClick={() => props.createSongApi()}>Add Music</Button>
+            <Button primary onClick="#">Add New Music</Button>
           </Menu.Item>
         </Menu.Menu>
       </Menu>
