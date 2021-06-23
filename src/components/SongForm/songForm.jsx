@@ -9,7 +9,7 @@ class SongForm extends Component{
             title: '',
             album: '',
             artist: '',
-            releaseDate: ''
+            release_date: ''
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,7 +35,7 @@ class SongForm extends Component{
             title: '',
             album: '',
             artist: '',
-            releaseDate: ''
+            release_date: ''
         });
     }
     render() {

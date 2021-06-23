@@ -30,21 +30,14 @@ class App extends Component {
         window.location.reload();
     }
 
-    addSong = async (song) => {
-        await axios.post('http://127.0.0.1:8000/music/', song)
-        let response = await this.allSongs()
-        if(response === undefined){
-            this.setState({
-            
-            })
-        }
-        else{
-            this.setState({
-                songs: response.data
-            });
-        }
+    addSong(newSong){
+        this.state.songs.push(newSong);
+        axios.post('http://127.0.0.1:8000/music/', newSong)
+        .then(response => this.setState({
+          newSong: response.data
+        }));
         window.location.reload();
-    }
+      }
 
     // Implement componentDidMount
     // Make API call in componentDidMount
