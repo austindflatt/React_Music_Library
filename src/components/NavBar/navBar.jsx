@@ -1,6 +1,6 @@
 import React from 'react';
 import './navBar.css';
-import { Button, Dropdown, Menu } from 'semantic-ui-react'
+import { Button, Menu } from 'semantic-ui-react'
 
 function NavBar(props) { 
     return (
@@ -11,7 +11,7 @@ function NavBar(props) {
 
         <Menu.Menu position='right'>
           <Menu.Item>
-            <Button primary onClick="#">Add New Music</Button>
+            <Button inverted color='green' onClick="#">Add New Music</Button>
           </Menu.Item>
         </Menu.Menu>
       </Menu>

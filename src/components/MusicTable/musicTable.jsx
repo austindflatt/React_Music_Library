@@ -27,7 +27,7 @@ const MusicTable = (props) => {
                 <td>{song.album}</td>
                 <td>{song.release_date}</td>
                 <td>{song.genre}</td>
-                <td><Button onClick={() => {props.update(song.id)}}>Update</Button>
+                <td><Button color='yellow' onClick={() => {props.update(song.id)}}>Update</Button>
                 <Button negative onClick={() => {props.delete(song.id)}}>Delete</Button></td>
             </tr>
         )}
