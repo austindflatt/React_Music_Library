@@ -44,32 +44,32 @@ class SongForm extends Component{
             <Form inverted onSubmit={this.handleSubmit}>
             <Form.Field>
                     <label>ID</label>
-                    <input placeholder='ID' type="text" name="id" value={this.state.id}
+                    <input type="text" name="id" value={this.state.id}
                         onChange={this.handleChange}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Artist</label>
-                    <input placeholder='Artist' type="text" name="artist" value={this.state.artist}
+                    <input type="text" name="artist" value={this.state.artist}
                         onChange={this.handleChange}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Title</label>
-                    <input placeholder='Song Title' type="text" name="title" value={this.state.title}
+                    <input type="text" name="title" value={this.state.title}
                         onChange={this.handleChange}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Album</label>
-                    <input placeholder='Album' type="text" name="album" value={this.state.album}
+                    <input type="text" name="album" value={this.state.album}
                         onChange={this.handleChange}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Release Date</label>
-                    <input placeholder='Release Date' type="text" name="release_date" value={this.state.release_date}
+                    <input type="text" name="release_date" value={this.state.release_date}
                         onChange={this.handleChange}/>
                 </Form.Field>
                 <Form.Field>
                     <label>Genre</label>
-                    <input placeholder='Genre' type="text" name="genre" value={this.state.genre}
+                    <input type="text" name="genre" value={this.state.genre}
                         onChange={this.handleChange}/>
                 </Form.Field>
                 <Button positive type='submit'>Add Song</Button>
